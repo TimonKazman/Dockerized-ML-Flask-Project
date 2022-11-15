@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+<h1> Wine Quality Predictor</h1>
+
+  <form action="{{url_for('predict')}}" method="post">
+    <div class="row">
+      <div class = "four columns">
+          <input type="text" name="fixed acidity" placeholder="fixed acidity" required="required" /><br>
+          <input type="text" name="volatile acidity" placeholder="volatile acidity" required="required" /><br>
+          <input type="text" name="citric acid" placeholder="citric acid" required="required" /><br>
+          <input type="text" name="residual sugar" placeholder="residual sugar" required="required" /><br>
+      </div>
+      <div class = "four columns">
+          <input type="text" name="chlorides" placeholder="chlorides" required="required" /><br>
+          <input type="text" name="free sulfur dioxide" placeholder="free sulfur dioxide" required="required" /><br>
+          <input type="text" name="total sulfur dioxide" placeholder="total sulfur dioxide" required="required" /><br>
+          <input type="text" name="density" placeholder="density" required="required" /><br>
+      </div>
+      <div class = "four columns">
+          <input type="text" name="pH" placeholder="pH" required="required" /><br>
+          <input type="text" name="sulphates" placeholder="sulphates" required="required" /><br>
+          <input type="text" name="alcohol" placeholder="alcohol" required="required" /><br>
+      </div>
+    </div>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+  </form>
+
+  <br>
+  <br>
+
+</div>
+{{pred}}
+        
+{% endblock %}
+				 						
